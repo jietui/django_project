@@ -1,2 +1,2 @@
-# django_project
-django example
+# Practise just for fun:p
+* basic usage
