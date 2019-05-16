@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titleBlock %}
+    django自带模板
+    {% endblock %}</title>
+</head>
+<body>
+{{ city }}
+<br>
+{{ district }}
+<br>
+{% for i in my_list %}
+<li>{{ forloop.counter }}{{ i }}</li>
+{% endfor %}
+<hr>
+{% if my_dict.graphics_card == "GTX1080TI" %}
+NB!
+{% endif %}
+<hr>
+{{ my_html | safe }}
+<hr>
+{{ my_list | length_is:10 }}
+<br>
+{{ my_list | upper }}
+<br>
+{{ ma | default:'null'}}
+<br>
+
+{% block contentBlock %}
+{% load listreverse %}
+{{ my_list | do_listreverse }}
+{% endblock %}
+
+</body>
+</html>
